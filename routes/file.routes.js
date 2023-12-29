@@ -27,7 +27,6 @@ FileRoutes.post(
   upload.single("file"),
   Authentication,
   async (req, res) => {
-    console.log(req.body, "hhh");
     try {
       if (!req.file) {
         return res.status(400).json({ error: "No file provided" });
